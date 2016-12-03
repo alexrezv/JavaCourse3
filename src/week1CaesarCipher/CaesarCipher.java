@@ -8,7 +8,7 @@ public class CaesarCipher {
         String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         int key = 15;
         System.out.println(abc);
-        System.out.println(getRearrangedABC(abc, 19) + "\n");
+        System.out.println(getRearrangedABC(abc, key) + "\n");
 
         String message = "At noon be in the conference room with your hat on for a surprise party. YELL LOUD!";
         System.out.println(message);
@@ -17,11 +17,11 @@ public class CaesarCipher {
         String decmsg = getDecryptedMessage(abc, encmsg, key);
         System.out.println(decmsg);
 
-        message = "First Legion";
+        //message = "First Legion";
         System.out.println("\n" + message);
-        encmsg = getTwoEncryptedMessage(abc, message, 23, 17);
+        encmsg = getTwoEncryptedMessage(abc, message, 8, 21);
         System.out.println(encmsg);
-        decmsg = getTwoDecryptedMessage(abc, encmsg, 23, 17);
+        decmsg = getTwoDecryptedMessage(abc, encmsg, 8, 21);
         System.out.println(decmsg);
 
 
