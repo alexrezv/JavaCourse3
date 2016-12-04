@@ -4,29 +4,6 @@ package week1CaesarCipher;
  * Created by alex on 03.12.16.
  */
 public class CaesarCipher {
-    public static void main(String[] args) {
-        String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        int key = 15;
-        System.out.println(abc);
-        System.out.println(getRearrangedABC(abc, key) + "\n");
-
-        String message = "At noon be in the conference room with your hat on for a surprise party. YELL LOUD!";
-        System.out.println(message);
-        String encmsg = getEncryptedMessage(abc, message, key);
-        System.out.println(encmsg);
-        String decmsg = getDecryptedMessage(abc, encmsg, key);
-        System.out.println(decmsg);
-
-        //message = "First Legion";
-        System.out.println("\n" + message);
-        encmsg = getTwoEncryptedMessage(abc, message, 8, 21);
-        System.out.println(encmsg);
-        decmsg = getTwoDecryptedMessage(abc, encmsg, 8, 21);
-        System.out.println(decmsg);
-
-
-
-    }
 
     private static String getRearrangedABC(String abc, int key) {
         key = key % abc.length();
@@ -34,11 +11,11 @@ public class CaesarCipher {
 
     }
 
-    private static String getEncryptedMessage(String abc, String message, int key) {
+    public static String getEncryptedMessage(String abc, String message, int key) {
         return doCaesarCipher(abc, message, key);
     }
 
-    private static String getDecryptedMessage(String abc, String message, int key) {
+    public static String getDecryptedMessage(String abc, String message, int key) {
         return doCaesarCipher(abc, message, Math.abs(26 - key));
     }
 
@@ -51,11 +28,11 @@ public class CaesarCipher {
         return encmesg;
     }
 
-    private static String getTwoEncryptedMessage(String abc, String message, int key1, int key2) {
+    public static String getTwoEncryptedMessage(String abc, String message, int key1, int key2) {
         return doTwoCaesarCipher(abc, message, key1, key2);
     }
 
-    private static String getTwoDecryptedMessage(String abc, String message, int key1, int key2) {
+    public static String getTwoDecryptedMessage(String abc, String message, int key1, int key2) {
         return doTwoCaesarCipher(abc, message, Math.abs(26 - key1), Math.abs(26 - key2));
     }
 
