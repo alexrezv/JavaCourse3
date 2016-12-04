@@ -1,6 +1,7 @@
 package week1CaesarCipher;
 
-import static week1CaesarCipher.CaesarCipher.*;
+import static week1CaesarCipher.CaesarCipher.getEncryptedMessage;
+import static week1CaesarCipher.CaesarCipher.getTwoEncryptedMessage;
 
 /**
  * Created by alex on 04.12.16.
@@ -8,7 +9,7 @@ import static week1CaesarCipher.CaesarCipher.*;
 public class Main {
     public static void main(String[] args) {
         String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        int key = 15;
+        /*int key = 15;
 
         String message = "At noon be in the conference room with your hat on for a surprise party. YELL LOUD!";
         System.out.println(message);
@@ -23,8 +24,23 @@ public class Main {
         encmsg = getTwoEncryptedMessage(abc, message, 8, 21);
         System.out.println(encmsg);
         decmsg = getTwoDecryptedMessage(abc, encmsg, 8, 21);
-        System.out.println(decmsg);
+        System.out.println(decmsg);*/
 
+        String str = "Laer. My necessaries are embark'd. Farewell. " +
+                "And, sister, as the winds give benefit";
+        System.out.println(str + "\n");
+
+        String enc = getEncryptedMessage(abc, str, 22);
+        System.out.println(enc);
+
+        CaesarBreaker cb = new CaesarBreaker(abc);
+        System.out.println(cb.decrypt(enc) + "\n");
+
+        enc = getTwoEncryptedMessage(abc, str, 13, 25);
+        System.out.println(enc);
+
+        //CaesarBreaker cb = new CaesarBreaker(abc);
+        System.out.println(cb.decryptTwoKeys(enc));
 
     }
 }

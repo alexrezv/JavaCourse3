@@ -6,6 +6,8 @@ import java.util.Arrays;
 
 /**
  * Created by alex on 03.12.16.
+ * TODO:
+ *  -   indexOfMax is not returning the index but a value
  */
 public class WordLengts {
     public static void main(String[] args) {
