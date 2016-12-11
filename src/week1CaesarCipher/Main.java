@@ -1,7 +1,6 @@
 package week1CaesarCipher;
 
-import static week1CaesarCipher.CaesarCipher.getEncryptedMessage;
-import static week1CaesarCipher.CaesarCipher.getTwoEncryptedMessage;
+import static week1CaesarCipher.CaesarCipher.getTwoDecryptedMessage;
 
 /**
  * Created by alex on 04.12.16.
@@ -26,7 +25,7 @@ public class Main {
         decmsg = getTwoDecryptedMessage(abc, encmsg, 8, 21);
         System.out.println(decmsg);*/
 
-        String str = "Laer. My necessaries are embark'd. Farewell. " +
+       /* String str = "Laer. My necessaries are embark'd. Farewell. " +
                 "And, sister, as the winds give benefit";
         System.out.println(str + "\n");
 
@@ -40,7 +39,13 @@ public class Main {
         System.out.println(enc);
 
         //CaesarBreaker cb = new CaesarBreaker(abc);
-        System.out.println(cb.decryptTwoKeys(enc));
+        System.out.println(cb.decryptTwoKeys(enc));*/
+
+        String str = "Aal uttx hm aal Qtct Fhljha pl Wbdl. Pvxvxlx!";
+        System.out.println(getTwoDecryptedMessage(abc, str, 14, 24));
+        CaesarBreaker cb = new CaesarBreaker(abc);
+        System.out.println(cb.decryptTwoKeys(str));
+
 
     }
 }
