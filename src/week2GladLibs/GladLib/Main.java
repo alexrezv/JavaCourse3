@@ -5,7 +5,11 @@ package week2GladLibs.GladLib;
  */
 public class Main {
     public static void main(String[] args) {
-        GladLib gl = new GladLib();
-        gl.makeStory();
+        //GladLib gl = new GladLib();
+        //gl.makeStory();
+        GladLibMap glm = new GladLibMap();
+        glm.makeStory();
+        System.out.println("total words in arrays: " + glm.totalWordsInMap());
+        System.out.println("total words considered: " + glm.totalWordsConsidered());
     }
 }

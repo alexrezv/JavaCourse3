@@ -81,7 +81,7 @@ public class CharactersInPlay {
         /*for (String character : this.names) {
             System.out.println(character + "\t" + this.counts.get(this.names.indexOf(character)));
         }*/
-        this.charactersWithNumParts(10, 1000);
+        this.charactersWithNumParts(50, 200);
     }
 
     /*
