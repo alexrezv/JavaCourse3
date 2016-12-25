@@ -39,4 +39,8 @@ public class LogEntry {
     public int getBytesReturned() {
         return bytesReturned;
     }
+
+    public String toString() {
+        return ipAddress + " " + accessTime.toString() + " " + request + " " + statusCode + " " + bytesReturned;
+    }
 }
